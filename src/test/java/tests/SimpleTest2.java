@@ -2,11 +2,12 @@ package tests;
 
 import org.testng.annotations.Test;
 
-public class SimpleTest {
+public class SimpleTest2 {
 
     @Test //annotation
     public void test1() { // test method
         System.out.println("test 1 is running");
+
     }
 
     @Test

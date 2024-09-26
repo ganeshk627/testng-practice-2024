@@ -2,7 +2,7 @@ package tests;
 
 import org.testng.annotations.Test;
 
-public class SimpleTest {
+public class SimpleTest1 {
 
     @Test //annotation
     public void test1() { // test method
@@ -12,9 +12,10 @@ public class SimpleTest {
     @Test
     public void test2() {
         System.out.println("test 2 is running");
+
     }
 
-    @Test
+    @Test(enabled = false)
     public void test3() {
         System.out.println("test 3 is running");
 

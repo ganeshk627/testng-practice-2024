@@ -18,7 +18,7 @@ public class LoginTest {
         WebDriver driver = new ChromeDriver();
 
         // 2. Open Orange application
-        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+//        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         driver.manage().window().maximize();
         // Implicit time - global timeout
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
