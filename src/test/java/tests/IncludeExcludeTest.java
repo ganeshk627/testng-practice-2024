@@ -2,19 +2,19 @@ package tests;
 
 import org.testng.annotations.Test;
 
-public class SimpleTest {
+public class IncludeExcludeTest {
 
     @Test //annotation
     public void test1() { // test method
         System.out.println("test 1 is running");
     }
 
-    @Test
+    @Test(enabled = false) // attribute 'enabled'
     public void test2() {
         System.out.println("test 2 is running");
     }
 
-    @Test
+    @Test(enabled = true) // attribute 'enabled'
     public void test3() {
         System.out.println("test 3 is running");
 
@@ -23,7 +23,7 @@ public class SimpleTest {
         }
     }
 
-    // No @Test, so it's not considered as a test
+    @Test
     public void test4() {
         System.out.println("I am test 4");
     }
