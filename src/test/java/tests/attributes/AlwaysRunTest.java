@@ -4,7 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.CommonActions;
 
-public class DependencyTest {
+
+public class AlwaysRunTest {
 CommonActions commonActions = new CommonActions();
 
     @Test(priority = 0)
@@ -18,7 +19,7 @@ CommonActions commonActions = new CommonActions();
         commonActions.waitFor(5);
     }
 
-    @Test(priority = 1, dependsOnMethods = "createAccount1")
+    @Test(priority = 1, dependsOnMethods = "createAccount1", alwaysRun = true)
     public void login1() {
         commonActions.waitFor(5);
     }
@@ -26,6 +27,7 @@ CommonActions commonActions = new CommonActions();
     @Test(priority = 1, dependsOnMethods = "createAccount2")
     public void login2() {
         commonActions.waitFor(5);
+        Assert.fail("intentionally failing the create account 1");
     }
 
     @Test(priority = 2, dependsOnMethods = "login1")
@@ -33,7 +35,7 @@ CommonActions commonActions = new CommonActions();
         commonActions.waitFor(5);
     }
 
-    @Test(priority = 2, dependsOnMethods = "login2")
+    @Test(priority = 2, dependsOnMethods = "login2", alwaysRun = false)
     public void logout2() {
         commonActions.waitFor(5);
     }
