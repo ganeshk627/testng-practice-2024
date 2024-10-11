@@ -16,12 +16,13 @@ public class LoginTest {
 
         // 1. Open browser
         WebDriver driver = new ChromeDriver();
-
-        // 2. Open Orange application
-//        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         // Implicit time - global timeout
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+        // 2. Open Orange application
+        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+
 
         LoginPage loginPage = new LoginPage(driver);
 
@@ -49,13 +50,14 @@ public class LoginTest {
 
         // 1. Open browser
         WebDriver driver = new ChromeDriver();
-
-        // 2. Open Orange application
-        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         driver.manage().window().maximize();
         // Implicit time - global timeout
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
+        // 2. Open Orange application
+        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+
+        // Creating Objects to access page objects
         LoginPage loginPage = new LoginPage(driver);
 
         // 3. Enter username as "admin"
@@ -66,7 +68,6 @@ public class LoginTest {
 
         // 5. Click the login button
         loginPage.clickLogin();
-
 
 
         // 6. Verify dashboard url
