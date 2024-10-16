@@ -3,9 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/Admin/IdeaProjects/testng-practice-2024" parallel="methods" thread-count="3">
         <classes>
-            
-            <class name="tests.attributes.DataProviderTest2"></class>
-
+            <class name="tests.attributes.DependencyTest"></class>
         </classes>
     </test>
 </suite>

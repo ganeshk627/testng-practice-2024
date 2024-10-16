@@ -4,7 +4,7 @@
     <test verbose="2" preserve-order="true" name="C:/Users/Admin/IdeaProjects/testng-practice-2024" parallel="classes">
         <classes>
             
-            <class name="tests.LoginTest"></class>
+            <class name="tests.smoke.LoginTest"></class>
 
             <class name="tests.SimpleTest">
             </class>
