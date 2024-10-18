@@ -29,8 +29,8 @@ public class DashboardPage {
         String expected_url = "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index";
         //actual
         String actual_url = ldriver.getCurrentUrl();
-        Assert.assertEquals(actual_url, expected_url);
-        Assert.assertNotEquals(actual_url, login_url);
+        Assert.assertEquals(actual_url, expected_url); //hard assert
+        Assert.assertNotEquals(actual_url, login_url); // hard assert
     }
 
 
