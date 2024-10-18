@@ -1,6 +1,6 @@
 package utils;
 
-public class CommonActions {
+public class MyUtils {
 
     public void waitFor(int seconds) {
         try {
