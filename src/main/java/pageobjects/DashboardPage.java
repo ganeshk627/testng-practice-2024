@@ -23,7 +23,6 @@ public class DashboardPage {
 
     public void validateDashboard() {
         // System.out.println(driver.getCurrentUrl());
-
         //expected
         String login_url = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
         String expected_url = "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index";
