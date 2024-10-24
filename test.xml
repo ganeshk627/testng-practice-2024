@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="AnnotationTest">
         <classes>
-            <class name="tests.BeforeAfterAnnotationTest"></class>
+            <class name="tests.smoke.MultipleLoginTest"></class>
         </classes>
     </test>
 </suite>
