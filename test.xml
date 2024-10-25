@@ -3,7 +3,9 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="AnnotationTest">
         <classes>
-            <class name="tests.smoke.MultipleLoginTest"></class>
+<!--            <class name="tests.smoke.LoginTest"></class>-->
+<!--            <class name="tests.smoke.MultipleLoginTest"></class>-->
+            <class name="tests.smoke.ResetPasswordTest"></class>
         </classes>
     </test>
 </suite>

@@ -1,5 +1,6 @@
 package tests;
 
+import basepage.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.DataProvider;
@@ -10,7 +11,7 @@ import utils.MyUtils;
 
 import java.time.Duration;
 
-public class AssertionTest {
+public class AssertionTest extends BasePage {
     @DataProvider(parallel = true)
     public Object[][] logindata() {
         Object[][] data =
@@ -29,18 +30,18 @@ public class AssertionTest {
     @Test(dataProvider = "logindata")
     public void loginTest(String username, String password) {
 
-        // 1. Open browser
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        // Implicit time - global timeout
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-        // 2. Open Orange application
-        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-
-        // Creating Objects to access page objects
-        LoginPage loginPage = new LoginPage(driver);
-        DashboardPage dashboardPage = new DashboardPage(driver);
+//        // 1. Open browser
+//        WebDriver driver = new ChromeDriver();
+//        driver.manage().window().maximize();
+//        // Implicit time - global timeout
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//
+//        // 2. Open Orange application
+//        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+//
+//        // Creating Objects to access page objects
+//        LoginPage loginPage = new LoginPage(driver);
+//        DashboardPage dashboardPage = new DashboardPage(driver);
 
         // 3. Enter username as "admin"
         loginPage.enterUsername(username);
@@ -54,8 +55,8 @@ public class AssertionTest {
         // 6. Verify dashboard url
         dashboardPage.validateDashboard();
 
-        // 7. close the browser/ application
-        driver.quit();
+//        // 7. close the browser/ application
+//        driver.quit();
     }
 
 

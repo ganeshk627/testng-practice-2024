@@ -1,5 +1,6 @@
 package tests.smoke;
 
+import basepage.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -11,7 +12,7 @@ import pageobjects.LoginPage;
 
 import java.time.Duration;
 
-public class MultipleLoginTest {
+public class MultipleLoginTest extends BasePage {
 
 
     @DataProvider
@@ -30,27 +31,27 @@ public class MultipleLoginTest {
     LoginPage loginPage;
     DashboardPage dashboardPage;
 
-    @BeforeMethod
-    public void setupBrowser() {
-        // 1. Open browser
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        // Implicit time - global timeout
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
-        // 2. Open Orange application
-        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-
-        // Creating Objects to access page objects
-        loginPage = new LoginPage(driver);
-        dashboardPage = new DashboardPage(driver);
-    }
-
-    @AfterMethod
-    public void closeBrowser() {
-        // 7. close the browser/ application even if the test failed/passed
-        driver.quit();
-    }
+//    @BeforeMethod
+//    public void setupBrowser() {
+//        // 1. Open browser
+//        driver = new ChromeDriver();
+//        driver.manage().window().maximize();
+//        // Implicit time - global timeout
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+//
+//        // 2. Open Orange application
+//        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+//
+//        // Creating Objects to access page objects
+//        loginPage = new LoginPage(driver);
+//        dashboardPage = new DashboardPage(driver);
+//    }
+//
+//    @AfterMethod
+//    public void closeBrowser() {
+//        // 7. close the browser/ application even if the test failed/passed
+//        driver.quit();
+//    }
 
 
     @Test(dataProvider = "logindata")
