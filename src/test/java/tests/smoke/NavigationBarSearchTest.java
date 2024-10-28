@@ -15,7 +15,7 @@ public class NavigationBarSearchTest extends BasePage {
         loginPage.clickLogin();
         dashboardPage.validateDashboard();
         navigationBarPage.searchSection(sectionName);
-        // validate section
+        // validate section in search results
     }
 
     @Test
@@ -26,8 +26,7 @@ public class NavigationBarSearchTest extends BasePage {
         loginPage.clickLogin();
         dashboardPage.validateDashboard();
         navigationBarPage.searchSection(sectionName);
-        // validate section
-
+        // validate section in search results
     }
 
     @Test
@@ -38,7 +37,6 @@ public class NavigationBarSearchTest extends BasePage {
         loginPage.clickLogin();
         dashboardPage.validateDashboard();
         navigationBarPage.searchSection(sectionName);
-        // validate section
-
+        // validate section in search results
     }
 }
