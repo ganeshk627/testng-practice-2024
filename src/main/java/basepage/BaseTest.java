@@ -14,7 +14,7 @@ import pageobjects.ResetPasswordPage;
 
 import java.time.Duration;
 
-public class BasePage {
+public class BaseTest {
 
     protected  WebDriver driver; // inside the class outside the setupbrowser method
     protected LoginPage loginPage;

@@ -1,9 +1,9 @@
 package tests.smoke;
 
-import basepage.BasePage;
+import basepage.BaseTest;
 import org.testng.annotations.Test;
 
-public class ResetPasswordTest extends BasePage {
+public class ResetPasswordTest extends BaseTest {
 
     @Test
     public void resetPasswordTest() {

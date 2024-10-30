@@ -1,20 +1,9 @@
 package tests.smoke;
 
-import basepage.BasePage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.safari.SafariDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import basepage.BaseTest;
 import org.testng.annotations.Test;
-import pageobjects.DashboardPage;
-import pageobjects.LoginPage;
 
-import java.time.Duration;
-
-public class LoginTest extends BasePage {
+public class LoginTest extends BaseTest {
     
     @Test
     public void validLoginTest() {

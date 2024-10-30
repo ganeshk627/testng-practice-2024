@@ -1,17 +1,10 @@
-package tests;
+package tests.assertions;
 
-import basepage.BasePage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import basepage.BaseTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import pageobjects.DashboardPage;
-import pageobjects.LoginPage;
-import utils.MyUtils;
 
-import java.time.Duration;
-
-public class AssertionTest extends BasePage {
+public class AssertionTest extends BaseTest {
     @DataProvider(parallel = true)
     public Object[][] logindata() {
         Object[][] data =

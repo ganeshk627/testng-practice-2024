@@ -1,11 +1,12 @@
 package tests.smoke;
 
-import basepage.BasePage;
+import basepage.BaseTest;
 import org.testng.annotations.Test;
 
-public class NavigationBarSearchTest extends BasePage {
+public class NavigationBarSearchTest extends BaseTest {
     String username = "admin";
     String password = "admin123";
+
 
     @Test
     public void searchTimeTest() {
@@ -16,6 +17,7 @@ public class NavigationBarSearchTest extends BasePage {
         dashboardPage.validateDashboard();
         navigationBarPage.searchSection(sectionName);
         // validate section in search results
+
     }
 
     @Test
@@ -27,6 +29,7 @@ public class NavigationBarSearchTest extends BasePage {
         dashboardPage.validateDashboard();
         navigationBarPage.searchSection(sectionName);
         // validate section in search results
+
     }
 
     @Test
@@ -38,5 +41,6 @@ public class NavigationBarSearchTest extends BasePage {
         dashboardPage.validateDashboard();
         navigationBarPage.searchSection(sectionName);
         // validate section in search results
+
     }
 }
