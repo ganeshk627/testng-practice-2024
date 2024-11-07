@@ -11,7 +11,7 @@ public class NavigationBarPage {
 
     private By SEARCH_INPUT = By.xpath("//input[@placeholder='Search']");
 
-    public void NavigationBarPage(WebDriver rdriver) {
+    public NavigationBarPage(WebDriver rdriver) {
         ldriver = rdriver;
     }
 

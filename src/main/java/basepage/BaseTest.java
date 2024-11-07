@@ -12,7 +12,12 @@ import pageobjects.LoginPage;
 import pageobjects.NavigationBarPage;
 import pageobjects.ResetPasswordPage;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.time.Duration;
+import java.util.Properties;
 
 public class BaseTest {
 
@@ -23,12 +28,17 @@ public class BaseTest {
     protected NavigationBarPage navigationBarPage;
 
 
-    @BeforeMethod
-    public void setupBrowser() {
-        // 1. Open browser
-        String browser = "chrome";
 
-        switch(browser.toLowerCase()) {
+    @BeforeMethod
+    public void setupBrowser() throws IOException {
+        // 1. Open browser
+//        String browser = "msedge";
+        FileInputStream fis = new FileInputStream("src/test/resources/browser.properties");
+        Properties properties = new Properties();
+        properties.load(fis);
+//        String browser = properties.getProperty("browser");
+//        switch(browser.toLowerCase()) {
+            switch(properties.getProperty("browser").toLowerCase()) {
             case "chrome":
                 driver = new ChromeDriver();
                 break;
@@ -48,16 +58,18 @@ public class BaseTest {
         }
         driver.manage().window().maximize();
         // Implicit time - global timeout
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.parseLong(properties.getProperty("implicitwait"))));
 
         // 2. Open Orange application
-        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+//        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        driver.get(properties.getProperty("url"));
 
         // Creating Objects to access page objects
         loginPage = new LoginPage(driver);
         dashboardPage = new DashboardPage(driver);
         resetPasswordPage = new ResetPasswordPage(driver);
-        navigationBarPage = new NavigationBarPage();
+        navigationBarPage = new NavigationBarPage(driver);
     }
 
     @AfterMethod

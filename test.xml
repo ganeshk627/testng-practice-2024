@@ -5,7 +5,7 @@
         <classes>
 <!--            <class name="tests.smoke.LoginTest"></class>-->
 <!--            <class name="tests.smoke.MultipleLoginTest"></class>-->
-            <class name="tests.assertions.SoftAssertionTest"></class>
+            <class name="tests.smoke.LoginTest"></class>
         </classes>
     </test>
 </suite>
